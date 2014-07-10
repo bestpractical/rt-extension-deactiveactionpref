@@ -16,6 +16,7 @@ meta-spec:
 name: RT-Extension-DeactiveActionPref
 no_index:
   directory:
+    - html
     - inc
 resources:
   license: http://opensource.org/licenses/gpl-license.php

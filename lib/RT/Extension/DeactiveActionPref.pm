@@ -16,28 +16,6 @@ $RT::Config::META{DeactiveAction} = {
     },
 };
 
-no warnings 'redefine';
-use RT::Record::Role::Lifecycle;
-use Scalar::Util 'blessed';
-my $orig_lifecycle = \&RT::Queue::LifecycleObj;
-*RT::Queue::LifecycleObj = sub {
-    my $self = shift;
-    my $res = $orig_lifecycle->($self);
-    if ( blessed($self) && $self->id && $self->CurrentUser->id != RT->SystemUser->id ) {
-        my $pref = $self->CurrentUser->Preferences(RT->System, {});
-        if ( my $update_type = $pref->{DeactiveAction} ) {
-            my @new_actions;
-            for my $action ( @{ $res->{'data'}{'actions'} || [] } ) {
-                if ( $res->IsInactive( $action->{to} ) ) {
-                    push @new_actions, { %$action, update => $update_type };
-                }
-            }
-            $res->{'data'}{'actions'} = \@new_actions;
-        }
-    }
-    return $res;
-};
-
 =head1 NAME
 
 RT-Extension-DeactiveActionPref - Deactive action user pref
