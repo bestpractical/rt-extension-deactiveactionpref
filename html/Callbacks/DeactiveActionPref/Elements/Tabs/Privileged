@@ -1,9 +1,9 @@
+<%args>
+$Path
+</%args>
 <%init>
 
-my $request_path = $HTML::Mason::Commands::r->path_info;
-$request_path =~ s!/{2,}!/!g;
-
-return unless $request_path =~ m{^/Ticket/} && $DECODED_ARGS->{'id'} &&  $DECODED_ARGS->{'id'} =~ /^(\d+)$/;
+return unless $Path =~ m{^/Ticket/} && $DECODED_ARGS->{'id'} &&  $DECODED_ARGS->{'id'} =~ /^(\d+)$/;
 
 my $id  = $1;
 my $ticket = RT::Ticket->new( $session{'CurrentUser'} );
