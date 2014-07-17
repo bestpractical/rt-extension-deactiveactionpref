@@ -22,9 +22,9 @@ RT-Extension-DeactiveActionPref - Deactive action user pref
 
 =head1 DESCRIPTION
 
-This extension allow user to specify the action(Respond or Comment) of links
-that change a ticket to an inactive status, e.g. the default "Resolve" and
-"Reject" links.
+This extension allow user to specify the action (Respond or Comment) of
+links that change a ticket to an inactive status, e.g. the default
+"Resolve" and "Reject" links.
 
 =head1 RT VERSION
 
@@ -44,9 +44,9 @@ May need root permissions
 
 =item Edit your F</opt/rt4/etc/RT_SiteConfig.pm>
 
-    Plugin('RT::Extension::DeactiveActionPref');
+Add this line:
 
-or add C<RT::Extension::DeactiveActionPref> to your existing C<@Plugins> line.
+    Plugin('RT::Extension::DeactiveActionPref');
 
 =item Clear your mason cache
 
@@ -58,18 +58,21 @@ or add C<RT::Extension::DeactiveActionPref> to your existing C<@Plugins> line.
 
 =head1 AUTHOR
 
-sunnavy <sunnavy@bestpractical.com>
+Best Practical Solutions, LLC E<lt>modules@bestpractical.comE<gt>
 
 =head1 BUGS
 
 All bugs should be reported via email to
-L<bug-RT-Extension-DeactiveActionPref@rt.cpan.org|mailto:bug-RT-Extension-DeactiveActionPref@rt.cpan.org>
+
+    L<bug-RT-Extension-DeactiveActionPref@rt.cpan.org|mailto:bug-RT-Extension-DeactiveActionPref@rt.cpan.org>
+
 or via the web at
-L<rt.cpan.org|http://rt.cpan.org/Public/Dist/Display.html?Name=RT-Extension-DeactiveActionPref>.
 
-=head1 LICENSE AND COPYRIGHT
+    L<rt.cpan.org|http://rt.cpan.org/Public/Dist/Display.html?Name=RT-Extension-DeactiveActionPref>.
 
-This software is Copyright (c) 2014 Best Practical Solutions, LLC.
+=head1 COPYRIGHT
+
+This extension is Copyright (C) 2014 Best Practical Solutions, LLC.
 
 This is free software, licensed under:
 
