@@ -1,4 +1,7 @@
 Revision history for RT-Extension-DeactiveActionPref
 
+0.02 2014-09-02
+ - Display a better label for the "from lifecycle" setting
+
 0.01 2014-07-17
  - Initial version

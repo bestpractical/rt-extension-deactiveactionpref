@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package RT::Extension::DeactiveActionPref;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use RT::Config;
 $RT::Config::META{DeactiveAction} = {
