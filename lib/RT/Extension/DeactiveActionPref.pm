@@ -12,6 +12,7 @@ $RT::Config::META{DeactiveAction} = {
     Widget          => '/Widgets/Form/Select',
     WidgetArguments => {
         Description => 'Action of links to change tickets to inactive status?', #loc
+        DefaultLabel => 'From lifecycle', #loc
         Values      => [qw(Respond Comment)], #loc
     },
 };
